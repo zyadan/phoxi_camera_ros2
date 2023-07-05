@@ -12,9 +12,9 @@ This is the development for the ros2 driver of Photoneo Phoxi 3D scanner (refer 
 * Download latest PhoXi Control
 * Add rights to execute downloaded file
 
-'''
+...
 sudo chmod +x PhotoneoPhoXiControlInstaller-xxxxx.run
-'''
+...
 
 * Install downloaded file
 '''
