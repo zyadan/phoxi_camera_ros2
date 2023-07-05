@@ -9,7 +9,7 @@ This is the development for the ros2 driver of Photoneo Phoxi 3D scanner (refer 
 
 ### Installation steps
 
-* Download latest PhoXi Control
+* Download latest PhoXi Control according to your ubuntu version
 * Add rights to execute downloaded file
 
 ```
