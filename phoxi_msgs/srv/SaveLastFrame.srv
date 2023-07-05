@@ -1,0 +1,4 @@
+string file_path     # full file path with file extension, available extensions: *.praw; *.ply; *.ptx; *.tif; *.prawf
+---
+string message
+bool success

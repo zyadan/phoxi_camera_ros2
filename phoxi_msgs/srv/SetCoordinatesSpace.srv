@@ -1,0 +1,4 @@
+uint8 coordinates_space  # NoValue = 0, CameraSpace = 1, MarkerSpace = 3, RobotSpace = 4, CustomSpace = 5
+---
+string message
+bool success

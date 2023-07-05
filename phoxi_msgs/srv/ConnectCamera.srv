@@ -1,0 +1,4 @@
+string camera_name
+---
+string message
+bool success

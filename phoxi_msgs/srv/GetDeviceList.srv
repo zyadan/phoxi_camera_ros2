@@ -1,0 +1,6 @@
+---
+int64 len
+string[] out_id
+phoxi_msgs/DeviceInformation[] device_information_list
+string message
+bool success

@@ -1,0 +1,4 @@
+int32 type
+int32 PHOXISCANNER = 0
+int32 PHOXICAMERA= 1
+int32 NOVALUE = 3

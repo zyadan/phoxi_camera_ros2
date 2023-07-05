@@ -1,0 +1,5 @@
+phoxi_camera_node:
+  ros__parameters:
+      test: true
+
+

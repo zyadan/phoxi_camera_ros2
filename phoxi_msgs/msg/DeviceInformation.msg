@@ -1,0 +1,6 @@
+string name
+phoxi_msgs/DeviceType type
+string hwidentification
+string ipaddress
+phoxi_msgs/DeviceConnectionStatus status
+string firmwareversion 
