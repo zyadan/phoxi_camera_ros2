@@ -1,5 +1,8 @@
 # phoxi_camera_ros2
-This is the development for the ros2 driver of Photoneo Phoxi 3D scanner (refer to its ROS1 driver https://github.com/photoneo/phoxi_camera)
+This is the development for the ros2 driver of Photoneo Phoxi 3D scanner 
+(refer to its ROS1 driver https://github.com/photoneo/phoxi_camera)
+![image](https://github.com/zyadan/phoxi_camera_ros2/assets/24379540/846a5034-8807-4f2e-a941-1a0cb3011e51)
+
 
 ## Installation
 
@@ -35,23 +38,31 @@ cd ros2_ws
 ```
 rosdep install --from-paths src --ignore-src -r -y
 ```
+* Revise the path of PhoxiControl library path to your path in phoxi_camera/CMakeLists.txt (usually under /opt folder)
+  need to be fixed in next stage
+```
+/opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0
+```
+
 * Build the packages
 ```
 colcon build
 ```
+* After building the packages, add the libPhoXi_API_gccxx.x.0_Release.so.1.xx.0 file into  ros2_ws/install/phoxi_camera/lib
+
 
 
 ## Test PhoXi ROS2 interface with real device
 
 * Start PhoXiControl application
-* Connect to your device
+
 * Run Interface node
 ```
-ro2 srun phoxi_camera phoxi_camera_node
+ros2 run phoxi_camera phoxi_camera_node
 # or run with launch file
 ros2 launch phoxi_camera phoxi_camera_launch.py
 ```
-* Use available ROS services to control your 3D scanner
+* Use available ROS2 services to control your 3D scanner
 
 
 
