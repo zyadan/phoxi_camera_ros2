@@ -3,7 +3,7 @@ This is the development for the ros2 driver of Photoneo Phoxi 3D scanner (refer 
 
 ## Installation
 
-* ROS2 (Humble)
+* ROS2 (here we used Humble under Ubuntu 22.04)
 * PhoXiControl version 1.10.x driver software which you can download on Photoneo website: https://www.photoneo.com/downloads/phoxi-control/ (* contact support@photoneo.com for testing the release candidate)
 
 
@@ -34,6 +34,10 @@ cd ros2_ws
 * Install all dependencies needed by phoxi_camera package
 ```
 rosdep install --from-paths src --ignore-src -r -y
+```
+* Build the packages
+```
+colcon build
 ```
 
 
