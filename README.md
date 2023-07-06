@@ -51,7 +51,7 @@ colcon build
 * After building the packages, add the libPhoXi_API_gccxx.x.0_Release.so.1.xx.0 file into  ros2_ws/install/phoxi_camera/lib
 - (need to be fixed at next stage)
 
-## Parameters
+### Parameters
 ```
 ~/scanner_id_                  - Default PhoXi 3D Scannet to connect after startup. Default value: "2019-07-005-LC3"
 ~/frame_id:                    - Frame id to which captured data relies to. Default value: "PhoXi3Dscanner_sensor"
@@ -82,30 +82,40 @@ colcon build
 ~/single_pattern_exposure_      - Default value:  2
 ~/camera_only_mode_             - Default value:  false
 ```
-## Available ROS services
+### Available ROS services
 ```
-~/V2/is_acquiring
-~/V2/is_connected
-~/V2/start_acquisition
-~/V2/stop_acquisition
-~/V2/set_transformation
-~/V2/set_coordinate_space
-~/V2/save_last_frame
-~/connect_camera
-~/disconnect_camera
-~/get_device_list
-~/get_frame
-~/get_hardware_indentification
-~/get_supported_capturing_modes
-~/is_acquiring
-~/is_connected
-~/save_frame
-~/set_parameters
-~/start_acquisition
-~/stop_acquisition
-~/trigger_image
+~/phoxi_camera/V2/is_acquiring
+~/phoxi_camera/V2/is_connected
+~/phoxi_camera/V2/start_acquisition
+~/phoxi_camera/V2/stop_acquisition
+~/phoxi_camera/V2/set_transformation
+~/phoxi_camera/V2/set_coordinate_space
+~/phoxi_camera/V2/save_last_frame
+~/phoxi_camera/connect_camera
+~/phoxi_camera/disconnect_camera
+~/phoxi_camera/get_device_list
+~/phoxi_camera/get_frame
+~/phoxi_camera/get_hardware_indentification
+~/phoxi_camera/get_supported_capturing_modes
+~/phoxi_camera/is_acquiring
+~/phoxi_camera/is_connected
+~/phoxi_camera/save_frame
+~/phoxi_camera/set_parameters
+~/phoxi_camera/start_acquisition
+~/phoxi_camera/stop_acquisition
+~/phoxi_camera/trigger_image
 ```
 
+### Available ROS topics
+```
+~/phoxi_camera/confidence_map
+~/phoxi_camera/depth_map
+~/phoxi_camera/normal_map
+~/phoxi_camera/parameter_updates
+~/phoxi_camera/points
+~/phoxi_camera/rgb_texture
+~/phoxi_camera/texture
+```
 
 ## Test PhoXi ROS2 interface with real device
 
