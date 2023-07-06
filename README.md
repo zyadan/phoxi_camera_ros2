@@ -39,7 +39,8 @@ cd ros2_ws
 rosdep install --from-paths src --ignore-src -r -y
 ```
 * Revise the path of PhoxiControl library path to your path in phoxi_camera/CMakeLists.txt (usually under /opt folder)
-- (need to be fixed at next stage)
+
+  (need to be fixed at next stage)
 ```
 /opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0
 ```
