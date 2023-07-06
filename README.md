@@ -24,7 +24,7 @@ sudo chmod +x PhotoneoPhoXiControlInstaller-xxxxx.run
 sudo ./PhotoneoPhoXiControlInstaller-xxxxx.run
 ```
 
-* clone phoxi_camera_ros2 repository to your ROS2 workspace (usually ros2_ws/src)
+* Clone phoxi_camera_ros2 repository to your ROS2 workspace (usually ros2_ws/src)
 ```
 cd ros2_ws/src
 git clone https://github.com/zyadan/phoxi_camera_ros2
