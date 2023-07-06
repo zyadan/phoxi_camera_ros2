@@ -45,6 +45,7 @@ export PHOXI_LIBRARY=/your PhoxiControl path/PhoXiControl-1.xx.xx/API/lib
 # for example
 export PHOXI_CONTROL_PATH=/opt/Photoneo/PhoXiControl-1.10.0
 export PHOXI_LIBRARY=/opt/Photoneo/PhoXiControl-1.10.0/API/lib
+```
 
 * Build the packages
 ```
