@@ -86,7 +86,6 @@ target_link_libraries(phoxi_camera_node
   ${PROJECT_NAME}
   ${PHOXI_LIBRARY}
   ${PCL_LIBRARIES}
-  ${PHOXI_RELEASE_LIBRARY}
 
 )
 
