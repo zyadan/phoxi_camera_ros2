@@ -101,6 +101,9 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(TARGETS
+phoxi_camera
+DESTINATION lib) 
 
 ament_export_dependencies(${DEPENDENCIES})
 ament_export_include_directories(include)
