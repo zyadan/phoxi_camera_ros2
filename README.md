@@ -50,7 +50,8 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build
 ```
 * After building the packages, add the libPhoXi_API_gccxx.x.0_Release.so.1.xx.0 file into  ros2_ws/install/phoxi_camera/lib
-- (need to be fixed at next stage)
+
+  (need to be fixed at next stage)
 
 ### Parameters
 ```
