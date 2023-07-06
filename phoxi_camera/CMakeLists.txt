@@ -52,20 +52,13 @@ set(INCLUDES
 
 )
 
-include_directories(include
-  # ${PHOXI_INCLUDE_DIRS}
-)
 
 set(SOURCES
-
     src/RosInterface.cpp
-    src/PhoXiInterface.cpp
-    
+    src/PhoXiInterface.cpp    
     )
     
     
-
-
 add_executable(phoxi_camera_node src/phoxi_camera_node.cpp)
 
 
@@ -89,28 +82,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 
 
-
-target_link_libraries(phoxi_camera 
-  ${PHOXI_LIBRARY}
-  ${PCL_LIBRARIES}
-
-
-)
-
 target_link_libraries(phoxi_camera_node 
   ${PROJECT_NAME}
   ${PHOXI_LIBRARY}
   ${PCL_LIBRARIES}
-  phoxi_camera
-  /opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0
 
 )
-
-
-  
-ament_target_dependencies(phoxi_camera_node 
-    ${DEPENDENCIES}
-)  
 
 
 
@@ -125,17 +102,10 @@ install(
 )
 
 
-
-install(TARGETS
-phoxi_camera
-DESTINATION lib)  
-
 ament_export_dependencies(${DEPENDENCIES})
 ament_export_include_directories(include)
 ament_export_libraries(${PROJECT_NAME})
   
-
-
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
