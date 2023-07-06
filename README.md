@@ -41,17 +41,22 @@ rosdep install --from-paths src --ignore-src -r -y
 * Set Phoxi path
 ```
 export PHOXI_CONTROL_PATH=/opt/Photoneo/PhoXiControl-1.xx.x
-export PHOXI_LIBRARY=/your PhoxiControl path/PhoXiControl-1.xx.xx/API/lib
+export PHOXI_RELEASE_LIBRART=/your PhoxiControl path/PhoXiControl-1.xx.xx/API/lib/
 # for example
 export PHOXI_CONTROL_PATH=/opt/Photoneo/PhoXiControl-1.10.0
-export PHOXI_LIBRARY=/opt/Photoneo/PhoXiControl-1.10.0/API/lib
+export PHOXI_RELEASE_LIBRART=/opt/Photoneo/PhoXiControl-1.10.0/API/lib/
+
 ```
 
 * Build the packages
 ```
 colcon build
 ```
-
+* Copy liblibPhoXi_API_gcc11.3.0_Release.so.1.10.0 to ros2_ws/install/phoxi_camera/lib folder
+```
+cd ros2_ws
+cp /opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0 ./install/phoxi_camera/lib/
+```
 
 ### Parameters
 ```
