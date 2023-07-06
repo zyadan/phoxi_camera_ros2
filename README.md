@@ -30,7 +30,7 @@ cd ros2_ws/src
 git clone https://github.com/zyadan/phoxi_camera_ros2
 ```
 
-* Change working directory to your root ROS workspace folder (usually ros2_ws )
+* Change working directory to your root ROS workspace folder (usually ros2_ws)
 ```
 cd ros2_ws
 ```
@@ -38,20 +38,19 @@ cd ros2_ws
 ```
 rosdep install --from-paths src --ignore-src -r -y
 ```
-* Revise the path of PhoxiControl library path to your path in phoxi_camera/CMakeLists.txt (usually under /opt folder)
-
-  (need to be fixed at next stage)
+* Set Phoxi path
 ```
-/opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0
-```
+export PHOXI_CONTROL_PATH=/opt/Photoneo/PhoXiControl-1.xx.x
+export PHOXI_LIBRARY=/your PhoxiControl path/PhoXiControl-1.xx.xx/API/lib
+# for example
+export PHOXI_CONTROL_PATH=/opt/Photoneo/PhoXiControl-1.10.0
+export PHOXI_LIBRARY=/opt/Photoneo/PhoXiControl-1.10.0/API/lib
 
 * Build the packages
 ```
 colcon build
 ```
-* After building the packages, add the libPhoXi_API_gccxx.x.0_Release.so.1.xx.0 file into  ros2_ws/install/phoxi_camera/lib
 
-  (need to be fixed at next stage)
 
 ### Parameters
 ```
@@ -106,6 +105,14 @@ colcon build
 ~/phoxi_camera/start_acquisition
 ~/phoxi_camera/stop_acquisition
 ~/phoxi_camera/trigger_image
+
+~/phoxi_camera_node/describe_parameters
+~/phoxi_camera_node/get_parameter_types
+~/phoxi_camera_node/get_parameters
+~/phoxi_camera_node/list_parameters
+~/phoxi_camera_node/set_parameters
+~/phoxi_camera_node/set_parameters_atomically
+
 ```
 
 ### Available ROS topics
@@ -113,7 +120,6 @@ colcon build
 ~/phoxi_camera/confidence_map
 ~/phoxi_camera/depth_map
 ~/phoxi_camera/normal_map
-~/phoxi_camera/parameter_updates
 ~/phoxi_camera/points
 ~/phoxi_camera/rgb_texture
 ~/phoxi_camera/texture
@@ -122,6 +128,7 @@ colcon build
 ## Test PhoXi ROS2 interface with real device
 
 * Start PhoXiControl application
+![image](https://github.com/zyadan/phoxi_camera_ros2/assets/24379540/50ef06e1-95d2-4174-94b0-6e597559f6a2)
 
 * Run Interface node
 ```
@@ -129,7 +136,10 @@ ros2 run phoxi_camera phoxi_camera_node
 # or run with launch file
 ros2 launch phoxi_camera phoxi_camera_launch.py
 ```
+![image](https://github.com/zyadan/phoxi_camera_ros2/assets/24379540/ace95a1c-1ad2-4794-b506-721b347a7356)
+
 * Use available ROS2 services to control your 3D scanner
+![image](https://github.com/zyadan/phoxi_camera_ros2/assets/24379540/71e72278-f8cb-4902-88d3-d299fee605f0)
 
 
 
