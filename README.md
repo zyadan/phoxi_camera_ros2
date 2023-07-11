@@ -45,6 +45,7 @@ rosdep install --from-paths src --ignore-src -r -y
 colcon build
 ```
 * Copy libPhoXi_API_gcc11.3.0_Release.so.1.10.0 to ros2_ws/install/phoxi_camera/lib folder
+  (need to be fixed in next stage)
 ```
 cd ros2_ws
 cp /opt/Photoneo/PhoXiControl-1.10.0/API/lib/libPhoXi_API_gcc11.3.0_Release.so.1.10.0 ./install/phoxi_camera/lib/
